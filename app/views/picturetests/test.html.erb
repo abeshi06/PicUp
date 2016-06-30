@@ -1,0 +1,39 @@
+<% @picturetests.each do |picturetest| %>
+  <%= image_tag picturetest.picture.url %>
+
+  	<p class="hintOpen" style="background-color:#FFCC66">
+  		ヒント
+  	</p>
+	<div class="hint">
+		<%= picturetest.hint %>
+	</div>
+
+  	<p class="answerOpen" style="background-color:#FF9966">
+  		答え
+  	</p>
+	<div class="answer">
+		<%= picturetest.answer %>
+	</div>
+
+<% end %>
+
+<%= paginate @picturetests %>
+<br>
+<%= link_to 'Back', picturetests_path %>
+
+<script type="text/javascript">
+$(function(){
+    $(".answer").css("display", "none");
+
+    $(".answerOpen").click(function(){
+        $(".answer").toggle();
+    });
+});
+$(function(){
+    $(".hint").css("display", "none");
+
+    $(".hintOpen").click(function(){
+        $(".hint").toggle();
+    });
+});
+</script>

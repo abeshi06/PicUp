@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Picturetests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hint</th>
+      <th>Picture</th>
+      <th>Answer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @picturetests.each do |picturetest| %>
+      <tr>
+        <td><%= picturetest.hint %></td>
+        <td><%= image_tag picturetest.picture.url %></td>
+        <td><%= picturetest.answer %></td>
+        <td><%= link_to 'Show', picturetest %></td>
+        <td><%= link_to 'Edit', edit_picturetest_path(picturetest) %></td>
+        <td><%= link_to 'Destroy', picturetest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Picturetest', new_picturetest_path %><br>
+<br>
+<br>
+<%= link_to 'TEST', test_picturetests_path %>

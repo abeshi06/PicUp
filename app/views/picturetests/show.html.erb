@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hint:</strong>
+  <%= @picturetest.hint %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag @picturetest.picture.url %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @picturetest.answer %>
+</p>
+
+<%= link_to 'Edit', edit_picturetest_path(@picturetest) %> |
+<%= link_to 'Back', picturetests_path %>

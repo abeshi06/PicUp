@@ -1,0 +1,30 @@
+<%= form_for(@picturetest) do |f| %>
+  <% if @picturetest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@picturetest.errors.count, "error") %> prohibited this picturetest from being saved:</h2>
+
+      <ul>
+      <% @picturetest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hint %><br>
+    <%= f.text_field :hint %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+    <%= f.hidden_field :picture_cache %>
+  </div>
+  <div class="field">
+    <%= f.label :answer %><br>
+    <%= f.text_field :answer %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
