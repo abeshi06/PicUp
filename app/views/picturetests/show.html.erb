@@ -1,19 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Hint:</strong>
+  <strong>ヒント</strong>
   <%= @picturetest.hint %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
+  <strong>画像</strong>
   <%= image_tag @picturetest.picture.url, style: "width: 100%;" %>
 </p>
 
 <p>
-  <strong>Answer:</strong>
+  <strong>解答</strong>
   <%= @picturetest.answer %>
 </p>
 
-<%= link_to 'Edit', edit_picturetest_path(@picturetest) %> |
-<%= link_to 'Back', picturetests_path %>
+<div align="center">
+	<%= link_to '更新', edit_picturetest_path(@picturetest), class: "btn waves-effect waves-light" %>
+</div>
+<br>
+<div align="center">
+	<%= link_to '戻る', picturetests_path, class: "btn waves-effect waves-light blue-grey" %>
+</div>

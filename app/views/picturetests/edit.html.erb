@@ -2,5 +2,10 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @picturetest %> |
-<%= link_to 'Back', picturetests_path %>
+<div align="center">
+	<%= link_to '更新', @picturetest, class: "btn waves-effect waves-light" %>
+</div>
+<br>
+<div align="center">
+	<%= link_to '戻る', picturetests_path, class: "btn waves-effect waves-light blue-grey" %>
+</div>

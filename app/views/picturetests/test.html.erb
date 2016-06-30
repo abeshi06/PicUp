@@ -1,24 +1,27 @@
 <% @picturetests.each do |picturetest| %>
   <%= image_tag picturetest.picture.url, style: "width: 100%;" %>
 
- 	<p class="hintOpen" style="background-color:#FFCC66">
+ 	<p class="hintOpen btn waves-effect waves-light amber">
  		ヒント
  	</p>
   <div class="hint">
-  	<%= picturetest.hint %>
+  	<b><%= picturetest.hint %></b>
   </div>
- 	<p class="answerOpen" style="background-color:#FF9966">
+  <br>
+ 	<p class="answerOpen btn waves-effect waves-light red">
  		答え
  	</p>
   <div class="answer">
-  	<%= picturetest.answer %>
+  	<b><%= picturetest.answer %></b>
   </div>
 
 <% end %>
 
 <%= paginate @picturetests %>
-<br>
-<%= link_to 'Back', picturetests_path %>
+
+<div align="center">
+  <%= link_to '戻る', picturetests_path, class: "btn waves-effect waves-light blue-grey" %>
+</div>
 
 <script type="text/javascript">
 $(function(){
