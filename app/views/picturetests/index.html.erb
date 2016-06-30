@@ -8,8 +8,8 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Hint</th>
-      <th width="30%">Picture</th>
       <th>Answer</th>
       <th colspan="3"></th>
     </tr>
@@ -18,8 +18,8 @@
   <tbody>
     <% @picturetests.each do |picturetest| %>
       <tr>
+        <td><%= picturetest.id %></td>
         <td><%= picturetest.hint %></td>
-        <td><%= image_tag picturetest.picture.url %></td>
         <td><%= picturetest.answer %></td>
         <td><%= link_to 'Show', picturetest %></td>
         <td><%= link_to 'Edit', edit_picturetest_path(picturetest) %></td>
