@@ -1,19 +1,18 @@
 <% @picturetests.each do |picturetest| %>
-  <%= image_tag picturetest.picture.url %>
+  <%= image_tag picturetest.picture.url, style: "width: 100%;" %>
 
-  	<p class="hintOpen" style="background-color:#FFCC66">
-  		ヒント
-  	</p>
-	<div class="hint">
-		<%= picturetest.hint %>
-	</div>
-
-  	<p class="answerOpen" style="background-color:#FF9966">
-  		答え
-  	</p>
-	<div class="answer">
-		<%= picturetest.answer %>
-	</div>
+ 	<p class="hintOpen" style="background-color:#FFCC66">
+ 		ヒント
+ 	</p>
+  <div class="hint">
+  	<%= picturetest.hint %>
+  </div>
+ 	<p class="answerOpen" style="background-color:#FF9966">
+ 		答え
+ 	</p>
+  <div class="answer">
+  	<%= picturetest.answer %>
+  </div>
 
 <% end %>
 

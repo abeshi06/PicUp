@@ -4,7 +4,7 @@ class PicturetestsController < ApplicationController
   # GET /picturetests
   # GET /picturetests.json
   def index
-    @picturetests = Picturetest.all
+    @picturetests = Picturetest.all.page(params[:page]).per(5)
   end
 
   # GET /picturetests/1

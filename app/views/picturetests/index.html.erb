@@ -2,11 +2,14 @@
 
 <h1>Listing Picturetests</h1>
 
+<h2 align="center"><%= link_to 'TESTSTART', test_picturetests_path %></h2>
+<br>
+<%= paginate @picturetests %>
 <table>
   <thead>
     <tr>
       <th>Hint</th>
-      <th>Picture</th>
+      <th width="30%">Picture</th>
       <th>Answer</th>
       <th colspan="3"></th>
     </tr>
@@ -27,8 +30,6 @@
 </table>
 
 <br>
-
+<%= paginate @picturetests %>
+<br>
 <%= link_to 'New Picturetest', new_picturetest_path %><br>
-<br>
-<br>
-<%= link_to 'TEST', test_picturetests_path %>
