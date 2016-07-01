@@ -73,6 +73,6 @@ class PicturetestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picturetest_params
-      params.require(:picturetest).permit(:hint, :picture, :picture_cache, :answer)
+      params.require(:picturetest).permit(:hint, :picture, :picture_cache, :remove_picture, :answer)
     end
 end

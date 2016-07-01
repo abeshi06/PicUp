@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hmkny9pv2
+  api_key: '453856225325285'
+  api_secret: cnCnxbgoCPHkoG3vwv2yJagMNRg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hmkny9pv2
+  api_key: '453856225325285'
+  api_secret: cnCnxbgoCPHkoG3vwv2yJagMNRg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hmkny9pv2
+  api_key: '453856225325285'
+  api_secret: cnCnxbgoCPHkoG3vwv2yJagMNRg
+  enhance_image_tag: true
+  static_image_support: false
