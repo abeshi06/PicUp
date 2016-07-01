@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :picturetests do
     get 'test', on: :collection
   end
+
+  root :to => 'picturetests#test'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
