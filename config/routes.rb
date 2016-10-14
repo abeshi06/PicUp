@@ -3,6 +3,13 @@ Rails.application.routes.draw do
     get 'test', on: :collection
   end
 
+  resources :images
+  resources :images do
+    member do
+      get 'show_image'
+    end
+  end
+
   root :to => 'picturetests#test'
 
   # The priority is based upon order of creation: first created -> highest priority.
